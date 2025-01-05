@@ -48,22 +48,22 @@ def jeu():
             print(nbordi)
             essais=1
         
-        while(nbutil != nbordi):
-            essais = essais + 1
-            if plusgrand(nbutil, nbordi) == True:
-                    print("Le chiffre est plus petit\n")
-            else:
-                print("Le chiifre est plus grand\n")
-                nbutil = demandeutilisateur()
-            print("Tu as gagné", pseudo, "! Il t'as fallu", essais, "essais.")
+            while(nbutil != nbordi):
+                essais = essais + 1
+                if plusgrand(nbutil, nbordi) == True:
+                        print("Le chiffre est plus petit\n")
+                else:
+                    print("Le chiifre est plus grand\n")
+                    nbutil = demandeutilisateur()
+                print("Tu as gagné", pseudo, "! Il t'as fallu", essais, "essais.")
     
-        # Tableau des scores
-    
-        scores.append((pseudo,essais))
-        scores.sort(key=lambda joueur: joueur[1])  # Tri par nombre d'essais
-        print("\nTableau des scores :")
-        for i, (nom, score) in enumerate(scores, start=1):
-            print(i, nom, " - ", score,"essais")
+            # Tableau des scores
+        
+            scores.append((pseudo,essais))
+            scores.sort(key=lambda joueur: joueur[1])  # Tri par nombre d'essais
+            print("\nTableau des scores :")
+            for i, (nom, score) in enumerate(scores, start=1):
+                print(i, nom, " - ", score,"essais")
     except ValueError:
          print("Entrez une réponse valide")
    
