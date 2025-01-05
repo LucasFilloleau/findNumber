@@ -39,7 +39,6 @@ def partie() :
     pseudo = str(input("Entrez vote pseudo :\n"))
     nbordi = tirerunnombre()
     nbutil = demandeutilisateur()
-    print(nbordi)
     essais=1
 
     while(nbutil != nbordi):
@@ -51,6 +50,7 @@ def partie() :
             print("Le nombre est plus grand\n")
             nbutil = demandeutilisateur()
     print("Tu as gagné", pseudo, "! Il t'as fallu", essais, "essais.")
+
     # Tableau des scores
 
     scores.append((pseudo,essais))
@@ -60,6 +60,7 @@ def partie() :
         print(i, nom, " - ", score,"essais")
 
     # boucle du jeu
+
     reponse=str(input('''Voulez vous rejouer ? Si oui tapez "Oui" sinon, tapez "Non"\n'''))
     if reponse == "Oui" or reponse == "oui":
         partie()
