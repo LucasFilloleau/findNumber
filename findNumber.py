@@ -48,7 +48,7 @@ def partie() :
             print("Le nombre est plus petit\n")
             nbutil = demandeutilisateur()
         else:
-            print("Le chiifre est plus grand\n")
+            print("Le nombre est plus grand\n")
             nbutil = demandeutilisateur()
     print("Tu as gagné", pseudo, "! Il t'as fallu", essais, "essais.")
     # Tableau des scores
