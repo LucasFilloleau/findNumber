@@ -10,7 +10,7 @@ from random import *
 # Définition des variables
 
 scores = []
-partie = 1
+numPartie = 1
 
 # Définition des fonctions 
 
@@ -57,7 +57,10 @@ def partie() :
     scores.sort(key=lambda joueur: joueur[1])  # Tri par nombre d'essais
     print("\nTableau des scores :")
     for i, (nom, score) in enumerate(scores, start=1):
-        print(i, nom, " - ", score,"essais")
+        if i == 1 :
+            print(i, nom, " - ", score,"essais  !! High Score !!")
+        else : 
+        	print(i, nom, " - ", score,"essais")
 
     # boucle du jeu
 
@@ -71,7 +74,6 @@ def partie() :
 
 def jeu():
     """Jeu "plus grand plus petit", complet"""
-    numPartie = 1
     try :
         partie()
         numPartie = numPartie + 1
