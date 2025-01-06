@@ -64,7 +64,7 @@ def partie() :
 
     # boucle du jeu
 
-    reponse=str(input('''Voulez vous rejouer ? Si oui tapez "Oui" sinon, tapez "Non"\n'''))
+    reponse = str(input('''Voulez vous rejouer ? Si oui tapez "Oui" sinon, tapez "Non"\n'''))
     if reponse == "Oui" or reponse == "oui":
         partie()
     else:
